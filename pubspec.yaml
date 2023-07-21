@@ -1,15 +1,23 @@
 name: proxity
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
+  sdk: ">=3.0.3 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   sizer: ^2.0.15
+  iconsax: ^0.0.8
+  flutter_floating_bottom_bar: ^1.1.0
+  dot_navigation_bar: ^1.0.2
+  eva_icons_flutter: ^3.1.0
+  floating_navigation_bar: ^0.0.5
+  translucent_navigation_bar: ^1.0.0
+  phosphor_flutter: ^2.0.0
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +26,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/

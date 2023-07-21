@@ -10,6 +10,18 @@ class MessagesPage extends StatefulWidget {
 class _MessagesPageState extends State<MessagesPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(leading: const Text('MMessages')),
+      body: const SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              children: [Text('Messages page')],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
