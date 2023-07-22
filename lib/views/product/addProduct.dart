@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyFilter extends StatefulWidget {
-  const MyFilter({super.key});
+class AddProduct extends StatefulWidget {
+  const AddProduct({super.key});
 
   @override
-  State<MyFilter> createState() => _MyFilterState();
+  State<AddProduct> createState() => _AddProductState();
 }
 
-class _MyFilterState extends State<MyFilter> {
+class _AddProductState extends State<AddProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _MyFilterState extends State<MyFilter> {
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Column(
-              children: [Text('profile page')],
+              children: [Text('add product page')],
             ),
           ),
         ),
