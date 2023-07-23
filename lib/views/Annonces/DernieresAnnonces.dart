@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 
-class MyPlus extends StatefulWidget {
-  const MyPlus({super.key});
+class DernieresAnnonces extends StatefulWidget {
+  const DernieresAnnonces({super.key});
 
   @override
-  State<MyPlus> createState() => _MyPlusState();
+  State<DernieresAnnonces> createState() => _DernieresAnnoncesState();
 }
 
-class _MyPlusState extends State<MyPlus> {
+class _DernieresAnnoncesState extends State<DernieresAnnonces> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
-          onPressed: () => Navigator.of(context).popAndPushNamed("/wrapper"),
+          onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text('Plus page'),
+        title: const Text('Dernières annonces'),
       ),
       body: const SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Column(
-                // children: [Text('Plus page')],
+                // children: [Text('Notification page')],
                 ),
           ),
         ),

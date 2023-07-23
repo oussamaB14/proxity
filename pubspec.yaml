@@ -18,6 +18,7 @@ dependencies:
   translucent_navigation_bar: ^1.0.0
   phosphor_flutter: ^2.0.0
   google_fonts: ^5.1.0
+  ternav_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,3 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:proxity/shared/colors.dart';
@@ -6,6 +5,7 @@ import 'package:proxity/views/product/addProduct.dart';
 import '../../views/home/home.dart';
 import '../../views/messages/messages.dart';
 import '../../views/plus/plus.dart';
+import 'package:ternav_icons/ternav_icons.dart';
 import '../../views/profile/profile.dart';
 
 class MyNavBar extends StatefulWidget {
@@ -44,36 +44,43 @@ class _MyNavBarState extends State<MyNavBar> {
             unselectedItemColor: MyColors.shadow,
             onTap: _onItemTapped,
             items: [
-              const BottomNavigationBarItem(
-                  icon: Icon(Iconsax.home), label: 'Home'),
-              const BottomNavigationBarItem(
-                  icon: Icon(Iconsax.message), label: 'Messages'),
+              BottomNavigationBarItem(
+                  icon: Icon(TernavIcons.lightOutline.home),
+                  label: 'Home',
+                  activeIcon: Icon(TernavIcons.light.home)),
+              BottomNavigationBarItem(
+                  icon: Icon(TernavIcons.lightOutline.chat),
+                  label: 'Messages',
+                  activeIcon: Icon(TernavIcons.light.chat)),
               BottomNavigationBarItem(
                   icon: SizedBox(
                     width: 45,
-                    height: 40,
+                    height: 45,
                     child: OutlinedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed("/addproduct");
-                        },
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.all(0),
-                          // shadowColor: Colors.grey,
-                          backgroundColor: MyColors.primaryColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          // side: BorderSide(width: 2, color: Colors.red),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/addproduct");
+                      },
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.all(0),
+                        // shadowColor: Colors.grey,
+                        backgroundColor: MyColors.primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
                         ),
-                        child: const Icon(
-                          Iconsax.add,
-                          color: Colors.white,
-                          size: 30,
-                        )),
+                        // side: BorderSide(width: 2, color: Colors.red),
+                      ),
+                      child: const Icon(
+                        Iconsax.add,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
                   ),
-                  label: 'Sell'),
-              const BottomNavigationBarItem(
-                  icon: Icon(Iconsax.profile), label: 'Profile'),
+                  label: 'Vendez'),
+              BottomNavigationBarItem(
+                  icon: Icon(TernavIcons.lightOutline.profile),
+                  label: 'Profile',
+                  activeIcon: Icon(TernavIcons.light.profile)),
               const BottomNavigationBarItem(
                   icon: Icon(Iconsax.square), label: 'Plus'),
             ]),

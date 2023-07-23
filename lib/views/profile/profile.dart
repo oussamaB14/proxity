@@ -11,14 +11,20 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: const Text('Mon Compte')),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          onPressed: () => Navigator.of(context).popAndPushNamed("/wrapper"),
+        ),
+        title: const Text('Profile page'),
+      ),
       body: const SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Column(
-              children: [Text('profile page')],
-            ),
+                // children: [Text('profile page')],
+                ),
           ),
         ),
       ),
